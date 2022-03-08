@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1325px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+    background: url(/img/bg.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+:root {
+    --primary-color: #fff;
+    --span-color: #9BA4ED;
+}
+
+.all-link {
+    padding: 4px 14px;
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 500;
+    border: solid 1px var(--primary-color);
+    border-radius: 6px;
+    background: transparent;
+    transition: .4s;
+}
+
+.all-link:hover {
+    background: var(--span-color);
+    border-color: var(--span-color);
+    color: black;
+}
+
+::-webkit-scrollbar {
+    background: black;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 26px;
+}
+
+/* header start */
+
+.header__nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+}
+
+.header__nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+}
+
+@keyframes rotate1 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(3600deg);
+    }
+}
+
+.logo {
+    width: 43px;
+    height: 43px;
+    display: block;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    animation: rotate1 15s linear infinite;
+}
+
+.nav__list {
+    max-width: 418px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.nav__link {
+    color: var(--primary-color);
+    font-size: 14px;
+    transition: .4s;
+}
+
+.nav__link:hover {
+    font-size: 16px;
+}
+
+
+
+
+
+.header__content {
+    padding: 250px 0 25px;
+}
+
+.header__content-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 60px;
+}
+
+.header__content-text {
+    max-width: 565px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 100px;
+    position: relative;
+}
+
+
+@keyframes run1 {
+    0% {
+        transform: translate(0) rotate(360deg);
+    }
+    30% {
+        transform: translateX(700px);
+    }
+    60% {
+        transform: translateY(500px) rotate(360deg);
+    }
+    80% {
+        transform: translateX(-600px);
+    }
+    100% {
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: translate(0);
+    }
+    30% {
+        transform: translateX(-200px) translateY(-180px) rotate(360deg);
+    }
+    50% {
+        transform: translateY(600px) translateX(-600px); 
+    }
+    70% {
+        transform: translateY(400px) translateX(-300px) rotate(360deg);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header__content-text::before {
+    content: url(/img/svg/header/Ellipse-lg.svg);
+    position: absolute;
+    width: 1vw;
+    top: -40%;
+    right: -40%;
+    z-index: -1;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+   /* animation: run1 25s linear infinite; */ 
+}
+
+.header__content-text::after {
+    content: url(/img/svg/header/Ellipse-md.svg);
+    position: absolute;
+    top: -20%;
+    right: -30%;
+    z-index: -1;
+ /*   animation: rotate2 15s linear infinite; */
+}
+
+
+.all-title {
+    font-size: 48px;
+    color: var(--primary-color);
+}
+
+.all-title span {
+    color: var(--span-color);
+}
+
+.header__content-desc {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 4px 0 18px;
+}
+
+.header__content-img-box {
+    max-width: 663px;
+    width: 100%;
+    position: relative;
+}
+
+.header__content-img-box::before {
+    content: url(/img/svg/header/Ellipse-xxl.svg);
+    position: absolute;
+    top: -10%;
+    right: 0;
+    z-index: -1;
+}
+
+.header__content-img-box::after {
+    content: url(/img/svg/header/Ellipse-sm.svg);
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    z-index: -1;
+}
+
+.header__content-img {
+    width: 100%;
+}
+
+/* header end */
+
+
+
+
+/* main start */
+
+.cards__section {
+    padding-top: 25px;
+}
+
+.cards__container {
+    display: flex;
+    justify-content: center;
+}
+
+.cards__box {
+    max-width: 1034px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: rgba(62, 60, 60, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    padding: 14px 10px;
+}
+
+.card {
+    max-width: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 24px;
+    background: rgba(62, 60, 60, 0.1);
+    backdrop-filter: blur(30px);
+    padding: 30px 20px;
+    border-radius: 20px;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.card__desc {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+
+
+
+.tech__section {
+    padding: 240px 0 240px;
+}
+
+.tech__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.tech__text-box {
+    max-width: 585px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tech__desc {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+
+
+.contact__section {
+    padding-bottom: 100px;
+}
+
+.contact__container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact__content-box {
+    max-width: 888px;
+    width: 100%;
+    background: rgba(62, 60, 60, 0.2);
+    backdrop-filter: blur(100px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 53px 0 92px;
+    row-gap: 54px;
+}
+
+.contact__title {
+    color: var(--primary-color);
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.contact__desc {
+    max-width: 468px;
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+/* main end */
+
+
+
+
