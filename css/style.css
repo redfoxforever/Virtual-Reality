@@ -21,7 +21,7 @@ li {
 }
 
 body {
-    background: url(/img/bg.jpg) center center no-repeat;
+    background: url(../img/bg.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -142,63 +142,6 @@ body {
 }
 
 
-@keyframes run1 {
-    0% {
-        transform: translate(0) rotate(360deg);
-    }
-    30% {
-        transform: translateX(700px);
-    }
-    60% {
-        transform: translateY(500px) rotate(360deg);
-    }
-    80% {
-        transform: translateX(-600px);
-    }
-    100% {
-        transform: translateX(0) rotate(360deg);
-    }
-}
-
-@keyframes rotate2 {
-    0% {
-        transform: translate(0);
-    }
-    30% {
-        transform: translateX(-200px) translateY(-180px) rotate(360deg);
-    }
-    50% {
-        transform: translateY(600px) translateX(-600px); 
-    }
-    70% {
-        transform: translateY(400px) translateX(-300px) rotate(360deg);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.header__content-text::before {
-    content: url(/img/svg/header/Ellipse-lg.svg);
-    position: absolute;
-    width: 1vw;
-    top: -40%;
-    right: -40%;
-    z-index: -1;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
-   /* animation: run1 25s linear infinite; */ 
-}
-
-.header__content-text::after {
-    content: url(/img/svg/header/Ellipse-md.svg);
-    position: absolute;
-    top: -20%;
-    right: -30%;
-    z-index: -1;
- /*   animation: rotate2 15s linear infinite; */
-}
-
-
 .all-title {
     font-size: 48px;
     color: var(--primary-color);
@@ -219,22 +162,6 @@ body {
     max-width: 663px;
     width: 100%;
     position: relative;
-}
-
-.header__content-img-box::before {
-    content: url(/img/svg/header/Ellipse-xxl.svg);
-    position: absolute;
-    top: -10%;
-    right: 0;
-    z-index: -1;
-}
-
-.header__content-img-box::after {
-    content: url(/img/svg/header/Ellipse-sm.svg);
-    position: absolute;
-    bottom: 30%;
-    left: 0;
-    z-index: -1;
 }
 
 .header__content-img {
@@ -320,6 +247,10 @@ body {
 .tech__desc {
     font-size: 14px;
     color: var(--primary-color);
+}
+
+.tech__img {
+    width: 100%;
 }
 
 
